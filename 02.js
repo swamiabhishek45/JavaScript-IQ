@@ -2,7 +2,7 @@
 
 // function checkArray(input) {
 //     // console.log(Array.isArray(input));
-//   console.log(input instanceof Array);  
+//   console.log(input instanceof Array);
 // }
 
 // checkArray(1);
@@ -11,10 +11,24 @@
 
 // Q2. Write a Js Function to clone an array
 
-function cloneArray(arr){
-    var cloned = [[-1,0],...arr];
-    console.log(cloned); 
-     
-}
+// function cloneArray(arr){
+//     var cloned = [[-1,0],...arr];
+//     console.log(cloned);
 
-cloneArray([1,2,3,[4,5]])
+// }
+
+// cloneArray([1,2,3,[4,5]])
+
+// Q3: Write a Js Function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+
+// function getter(arr, n = 1) {
+//   let cloned = [];
+//   for (let i = 0; i < n; i++) {
+//     if (arr[i] !== undefined) {
+//       cloned.push(arr[i]);
+//     }
+//   }
+//   console.log(cloned);
+// }
+
+// getter([1, 2, 3, 4, 5], 9);
