@@ -32,3 +32,11 @@
 // }
 
 // getter([1, 2, 3, 4, 5], 9);
+
+// Q4. Write a JS function to join all elements of the array together and return the result as a string.
+
+function joiner(arr) {
+  console.log([arr.join(",")]);
+}
+
+joiner(["Red", "Green", "Blue", "Yellow"]);
