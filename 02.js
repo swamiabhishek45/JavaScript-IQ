@@ -8,3 +8,13 @@
 // checkArray(1);
 // checkArray([1,2,3]);
 // checkArray(true);
+
+// Q2. Write a Js Function to clone an array
+
+function cloneArray(arr){
+    var cloned = [[-1,0],...arr];
+    console.log(cloned); 
+     
+}
+
+cloneArray([1,2,3,[4,5]])
