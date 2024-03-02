@@ -35,8 +35,19 @@
 
 // Q4. Write a JS function to join all elements of the array together and return the result as a string.
 
-function joiner(arr) {
-  console.log([arr.join(",")]);
+// function joiner(arr) {
+//   console.log([arr.join(",")]);
+// }
+
+// joiner(["Red", "Green", "Blue", "Yellow"]);
+
+// Q5. possible ways to create an object
+
+var obj1 = {}; // object literal
+var obj2 = Object.create(null); // object create method
+function createObj() { // object constructor function
+  this.name = "Abhi";
 }
 
-joiner(["Red", "Green", "Blue", "Yellow"]);
+const obj3 = new createObj();
+console.log(obj3);
