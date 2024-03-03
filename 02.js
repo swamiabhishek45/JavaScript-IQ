@@ -44,10 +44,20 @@
 // Q5. possible ways to create an object
 
 // var obj1 = {}; // object literal
+
 // var obj2 = Object.create(null); // object create method
+
 // function createObj() { // object constructor function
 //   this.name = "Abhi";
 // }
-
 // const obj3 = new createObj();
-// console.log(obj3);
+
+// class Obj4{
+//   constructor() {
+//     a = 12;
+//   }
+// }
+
+// var ans = new Obj4();
+
+
