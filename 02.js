@@ -64,7 +64,7 @@
 // function myFunc(inp) {
 //     return function(inp2){
 //         console.log(inp + inp2);
-         
+
 //     }
 // }
 // myFunc(10)(20)
@@ -77,12 +77,39 @@
 // var: ES5, function scoped, add selfly in window
 // let and const: ES6, braces(block) scoped, doesn't add selfly in window
 
-function foo(){
-    if(true){
-        var a = 12;
-    }
-    console.log(a);
-    
-}
+// function foo(){
+//     if(true){
+//         var a = 12;
+//     }
+//     console.log(a);
 
-foo();
+// }
+
+// foo();
+
+// Q8. call, apply, bind
+
+// this keyword - haramzada keyword
+
+// 1. Global: window
+// console.log(this);
+
+// 2. function: window
+// function func() {
+//     console.log(this);
+// }
+// func();
+
+// 3. method: object {function inside object is called method}
+// var obj = {
+//     name: "Abhi",
+//     age: 21,
+//     sayName: function(){
+//         console.log(this);
+//     }
+// }
+// obj.sayName();
+// 4. ES5 function inside method: window
+// 5. ES6 function inside method: object
+
+
