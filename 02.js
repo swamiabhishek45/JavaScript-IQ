@@ -112,4 +112,10 @@
 // 4. ES5 function inside method: window
 // 5. ES6 function inside method: object
 
+// call - with the help of call method we can decide what's the value of this keyword inside the function
+var obj = [];
 
+function foo() {
+    console.log(this);
+}
+foo.call(obj);
