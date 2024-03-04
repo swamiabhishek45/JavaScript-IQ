@@ -57,16 +57,32 @@
 //     a = 12;
 //   }
 // }
-
 // var ans = new Obj4();
 
-// Higher order functions --> A function which returns function and which accept function as argument.
+// Q6. Higher order functions --> A function which returns function and which accept function as argument.
 
-function myFunc(inp) {
-    return function(inp2){
-        console.log(inp + inp2);
+// function myFunc(inp) {
+//     return function(inp2){
+//         console.log(inp + inp2);
          
-    }
-}
-myFunc(10)(20)
+//     }
+// }
+// myFunc(10)(20)
 
+// Q7. Diff btwn var, let and const.
+
+// var: It is used for declaring variables globally or locally (block scope). But it can be reassigned.
+// let: It is also used for declaring variables but only within block scope and not outside of it. So it can't be redeclare in the same
+
+// var: ES5, function scoped, add selfly in window
+// let and const: ES6, braces(block) scoped, doesn't add selfly in window
+
+function foo(){
+    if(true){
+        var a = 12;
+    }
+    console.log(a);
+    
+}
+
+foo();
