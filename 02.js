@@ -60,4 +60,13 @@
 
 // var ans = new Obj4();
 
+// Higher order functions --> A function which returns function and which accept function as argument.
+
+function myFunc(inp) {
+    return function(inp2){
+        console.log(inp + inp2);
+         
+    }
+}
+myFunc(10)(20)
 
