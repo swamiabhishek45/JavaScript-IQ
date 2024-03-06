@@ -5,23 +5,47 @@
 
 // var arr = [1,2,3,4,5];
 // var arr2 = [];
-
 // arr.forEach((val) => {
 //     arr2.push(val * 2);
 // })
-
 // console.log(arr2);
 
-var words = ["Abhishek", "Omkar", "Nitin","Vishal","Prasad"];
+// var words = ["Abhishek", "Omkar", "Nitin","Vishal","Prasad"];
+// const ans = words.map((word) => {
+//     if(word.length === 5) {
+//         return `<p>${word}</p>`
+//     } else {
+//         return `<span>${word}</span>`
+//     }
+// }
+// console.log(ans);
 
-const ans = words.map((word) => {
-    if(word.length === 5) {
-        return `<p>${word}</p>`
-    } else {
-        return `<span>${word}</span>`
-    }
+var arr = [
+  {
+    name: "Abhishek",
+    age: 21,
+  },
+  {
+    name: "Prasad",
+    age: 20,
+  },
+  {
+    name: "Nitin",
+    age: 19,
+  },
+  {
+    name: "Oma",
+    age: 21,
+  },
+  {
+    name: "Vishal",
+    age: 18,
+  },
+];
+
+const ans = arr.map((val) => {
+    return val.name
 })
 
 console.log(ans);
-
 
