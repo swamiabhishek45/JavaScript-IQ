@@ -20,32 +20,33 @@
 // }
 // console.log(ans);
 
-var arr = [
-  {
-    name: "Abhishek",
-    age: 21,
-  },
-  {
-    name: "Prasad",
-    age: 20,
-  },
-  {
-    name: "Nitin",
-    age: 19,
-  },
-  {
-    name: "Oma",
-    age: 21,
-  },
-  {
-    name: "Vishal",
-    age: 18,
-  },
-];
+// var arr = [
+//   {
+//     name: "Abhishek",
+//     age: 21,
+//   },
+//   {
+//     name: "Prasad",
+//     age: 20,
+//   },
+//   {
+//     name: "Nitin",
+//     age: 19,
+//   },
+//   {
+//     name: "Oma",
+//     age: 21,
+//   },
+//   {
+//     name: "Vishal",
+//     age: 18,
+//   },
+// ];
 
-const ans = arr.map((val) => {
-    return val.name
-})
+// const ans = arr.map((val) => {
+//     return val.name
+// })
 
-console.log(ans);
+// console.log(ans);
+
 
