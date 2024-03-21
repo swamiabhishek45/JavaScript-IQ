@@ -3,10 +3,10 @@
 // 1. Object literal syntax
 
 var obj = {
-    name: "Abhi",
-    age: 21
-}
-obj.height = 5.8
+  name: "Abhi",
+  age: 21,
+};
+obj.height = 5.8;
 // console.log(obj);
 
 // 2. Object constructor
@@ -34,14 +34,14 @@ let carProps = {
 };
 
 var car = Object.create(vehicle, carProps);
-car.name = "Mercedes"
+car.name = "Mercedes";
 
 // console.log(car.color);
 // console.log(car.type);
 // console.log(vehicle.color);
 
 // 4. Function constructor
-function Person(name){
+function Person(name) {
   this.name = name;
   this.age = 21;
 }
@@ -51,22 +51,34 @@ var obj = new Person("Abhishek");
 // console.log(obj);
 
 // 5. Function constructor with prototype
-function Person(){}
+function Person() {}
 Person.prototype.name = "Abhishek";
 var obj = new Person();
 
+// console.log(obj.name);
+
+// 6. Object's assign method:
+const obj1 = { name: "Abhishek" };
+const obj2 = { age: 21 };
+
+var obj = Object.assign({ work: "Student" }, obj1, obj2);
+
 // console.log(obj);
-// console.log(prototype);
 
-function func1() {
-  setTimeout(() => {
-    console.log(x);
-    console.log(y);
-  }, 3000);
-
-  var x = 2;
-  let y = 12;
+// 7.ES6 Class syntax:
+class Manus{
+  constructor(name){
+    this.name = name;
+  }
 }
-func1();
-  
-  
+
+var obj = new Manus("Abhishek");
+
+// console.log(obj);
+
+// 8. Singleton pattern:
+var obj = new (function() {
+  this.name = "Abhishek"
+})();
+
+console.log(obj);
