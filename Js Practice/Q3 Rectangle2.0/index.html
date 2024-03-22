@@ -37,8 +37,15 @@
     <script>
 
         window.addEventListener("mousemove", function(details) {
+
+            var rectangle = document.querySelector(".rectangle");
+
+            var rectDetails = rectangle.getBoundingClientRect();
+
+            var xval = gsap.utils.mapRange(0, window.innerWidth, 100+rectDetails.width / 2, window.innerWidth - rectDetails.width, details.clientX);
+
             gsap.to(".rectangle", {
-                left: details.clientX + "px",
+                left: xval + "px",
                 top: details.clientY + "px",
                 duration: 0.5,
                 ease: "power4.inOut",
