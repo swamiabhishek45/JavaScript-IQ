@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <style>
       * {
         padding: 0;
@@ -35,23 +40,25 @@
   <body>
     <div class="rectangle"></div>
     <script>
+      window.addEventListener("mousemove", function (details) {
+        var rectangle = document.querySelector(".rectangle");
 
-        window.addEventListener("mousemove", function(details) {
+        var rectDetails = rectangle.getBoundingClientRect();
 
-            var rectangle = document.querySelector(".rectangle");
+        var xval = gsap.utils.mapRange(
+          0,
+          window.innerWidth,
+          100 + rectDetails.width / 2,
+          window.innerWidth - rectDetails.width,
+          details.clientX
+        );
 
-            var rectDetails = rectangle.getBoundingClientRect();
-
-            var xval = gsap.utils.mapRange(0, window.innerWidth, 100+rectDetails.width / 2, window.innerWidth - rectDetails.width, details.clientX);
-
-            gsap.to(".rectangle", {
-                left: xval + "px",
-                top: details.clientY + "px",
-                duration: 0.5,
-                ease: "power4.inOut",
-                ease: Power4
-            })
-        })
+        gsap.to(".rectangle", {
+          left: xval + "px",
+          // top: details.clientY + "px",
+          ease: Power4,
+        });
+      });
     </script>
   </body>
 </html>

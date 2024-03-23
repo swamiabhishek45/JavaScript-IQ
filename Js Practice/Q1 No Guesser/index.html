@@ -81,13 +81,11 @@
         if (userGuess === randomNumber) {
           lastResult.textContent = "Congrulations! You got it right!";
           lastResult.style.backgroundColor = "green";
-          lastResult.style.color = "white";
           lowOrHi.textContent = "";
           setGameOver();
         } else if (guessCount === 10) {
           lastResult.textContent = "!!!GAME OVER!!!";
           lastResult.style.backgroundColor = "red";
-          lastResult.style.color = "white";
           lowOrHi.textContent = "";
           setGameOver();
         } else {
