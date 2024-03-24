@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
 }
 
-.main{
+.main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,7 @@ html, body{
     background: rgb(100, 156, 100);
 }
 
-.panel{
+.panel {
     overflow: hidden;
     height: 80%;
     width: 80%;
@@ -27,7 +27,7 @@ html, body{
     border-radius: 10px;
 }
 
-.ptop{
+.ptop {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,17 +38,17 @@ html, body{
     background: rgb(61, 102, 61);
 }
 
-.elem{
-display: flex;
-gap: 10px;
-align-items: center;
+.elem {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-.elem h4{
+.elem h4 {
     font-weight: 500;
 }
 
-.box{
+.box {
     border-radius: 5px;
     padding: 10px;
     width: 50px;
@@ -56,11 +56,11 @@ align-items: center;
     text-align: center;
 }
 
-.box p{
+.box p {
     color: rgb(61, 102, 61);
 }
 
-.pbtm{
+.pbtm {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -69,21 +69,19 @@ align-items: center;
     padding: 20px;
     overflow: auto;
 }
-.pbtm::-webkit-scrollbar{
+
+.pbtm::-webkit-scrollbar {
     width: 5px;
-    /* background: rgb(61, 102, 61); */
 }
 
-.pbtm::-webkit-scrollbar-thumb{
+.pbtm::-webkit-scrollbar-thumb {
     background: rgb(61, 102, 61);
-    /* border-radius: 50%; */
 }
 
-
-.bubble{
+.bubble {
     height: 50px;
     width: 50px;
-    background: rgb(61, 102, 61);
+    background: rgb(77, 128, 77);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -91,7 +89,95 @@ align-items: center;
     color: white;
 }
 
-.bubble:hover{
-    background: rgb(47, 78, 47);
+.bubble:hover {
+    background: rgb(48, 79, 48);
     cursor: pointer;
+}
+
+.gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(48, 79, 48);
+    text-align: center;
+}
+
+.gameOver button {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(75, 123, 75);
+    color: white;
+    border: none;
+}
+
+.gameOver button:hover {
+    background: rgb(60, 98, 60);
+}
+
+@media screen and (max-width: 768px) {
+    .panel {
+        height: 90%;
+        width: 90%;
+    }
+
+    .ptop {
+        height: 80px;
+    }
+
+    .pbtm {
+        height: calc(100% - 80px);
+    }
+
+    .elem h4 {
+        font-size: 14px;
+    }
+
+    .box {
+        width: 40px;
+    }
+
+    .bubble {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .panel {
+        height: 95%;
+        width: 95%;
+    }
+
+    .ptop {
+        height: 60px;
+    }
+
+    .pbtm {
+        height: calc(100% - 60px);
+        padding: 10px;
+    }
+
+    .elem h4 {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 30px;
+        padding: 5px;
+    }
+
+    .bubble {
+        height: 30px;
+        width: 30px;
+    }
+
+    .gameOver {
+        font-size: 14px;
+    }
+
+    .gameOver button {
+        padding: 8px;
+    }
 }
