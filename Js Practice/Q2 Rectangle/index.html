@@ -1,37 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Document</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-        html,body{
-            height: 100%;
-            width: 100%;
-        }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
 
-        .rectangle{
-            width: 400px;
-            height: 200px;
-            border: 1px solid black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+      .rectangle {
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
-</head>
-<body>
-    <div class="rectangle">
+  </head>
+  <body>
+    <div class="rectangle"></div>
+    <script>
+      var rectangle = document.querySelector(".rectangle");
 
-    </div>
-</body>
+      rectangle.addEventListener("mousemove", function (details) {
+        var rectLoc = rectangle.getBoundingClientRect();
+
+        var mouseLoc = details.clientX;
+
+        var insideRectVal = mouseLoc - rectLoc.left;
+
+        if (insideRectVal < rectLoc.width / 2) {
+          var redColor = gsap.utils.mapRange(
+            0,
+            rectLoc.width / 2,
+            255,
+            0,
+            insideRectVal
+          );
+          gsap.to(rectangle, {
+            backgroundColor: `rgb(${redColor}, 0, 0)`,
+            ease: Power4,
+          });
+        } else {
+          var greenColor = gsap.utils.mapRange(
+            rectLoc.width / 2,
+            rectLoc.width,
+            0,
+            255,
+            insideRectVal
+          );
+          gsap.to(rectangle, {
+            backgroundColor: `rgb(0, ${greenColor}, 0)`,
+            ease: Power4,
+          });
+        }
+
+        // if (insideRectVal < rectLoc.width / 2) {
+        //   var redColor = gsap.utils.mapRange(
+        //     0,
+        //     rectLoc.width / 2,
+        //     255,
+        //     0,
+        //     insideRectVal
+        //   );
+
+        //   rectangle.style.backgroundColor = `rgb(${redColor}, 0, 0)`;
+        // } else {
+        //   var greenColor = gsap.utils.mapRange(
+        //     rectLoc.width / 2,
+        //     rectLoc.width,
+        //     0,
+        //     255,
+        //     insideRectVal
+        //   );
+
+        //   rectangle.style.backgroundColor = `rgb(0, ${greenColor}, 0)`;
+        // }
+      });
+
+      rectangle.addEventListener("mouseleave", function () {
+        gsap.to(rectangle, {
+          backgroundColor: "white",
+        });
+        // rectangle.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
 </html>
