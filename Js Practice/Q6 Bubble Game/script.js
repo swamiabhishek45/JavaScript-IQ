@@ -3,7 +3,7 @@ const timer = document.querySelector("#timer");
 const hit = document.querySelector("#hit");
 const score = document.querySelector("#score");
 
-var time = 5;
+var time = 60;
 var scoreVal = 0;
 
 function createBubble() {
@@ -56,10 +56,10 @@ pbtm.addEventListener("click", function (dets) {
     createBubble();
   } else if (clickedNum !== parseInt(hit.textContent)) {
     decreaseScore();
-    targetElement.style.backgroundColor = "red";
-    setTimeout(function () {
-      targetElement.style.backgroundColor = "rgb(77, 128, 77)";
-    }, 1000);
+    // targetElement.style.backgroundColor = "red";
+    // setTimeout(function () {
+    //   targetElement.style.backgroundColor = "rgb(77, 128, 77)";
+    // }, 1000);
   }
 });
 
