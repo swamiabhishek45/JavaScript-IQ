@@ -69,7 +69,15 @@ align-items: center;
     padding: 20px;
     overflow: auto;
 }
+.pbtm::-webkit-scrollbar{
+    width: 5px;
+    /* background: rgb(61, 102, 61); */
+}
 
+.pbtm::-webkit-scrollbar-thumb{
+    background: rgb(61, 102, 61);
+    /* border-radius: 50%; */
+}
 
 
 .bubble{
