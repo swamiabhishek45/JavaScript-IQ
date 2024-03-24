@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        text-align: center;
+      }
+
+      button {
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+        background-color: cyan;
+        border: 1px solid rgba(0, 0, 0, 0.331);
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+
+      #resetBtn {
+        width: 70px;
+      }
+
+      #input {
+        width: 70px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <h1>0</h1>
+      <div>
+        <button id="decreaseBtn">-</button>
+        <button id="increaseBtn">+</button>
+      </div>
+      <div class="inputField">
+        <p>Increment/Decrement by:<input type="number" id="input" /></p>
+      </div>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <script>
+      const h1 = document.querySelector("h1");
+      const incBtn = document.querySelector("#increaseBtn");
+      const decBtn = document.querySelector("#decreaseBtn");
+      const resetBtn = document.querySelector("#resetBtn");
+      const input = document.querySelector("#input");
+
+      let num = 0;
+
+      incBtn.addEventListener("click", function () {
+        var inputVal = +input.value;
+        h1.textContent = num += inputVal || 1;
+      });
+
+      decBtn.addEventListener("click", function () {
+        var inputVal = +input.value;
+        h1.textContent = num -= inputVal || 1;
+      });
+
+      resetBtn.addEventListener("click", function () {
+        num = 0;
+        h1.textContent = num;
+      });
+    </script>
+  </body>
+</html>
