@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background: rgb(12, 146, 198);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    height: 350px;
+    width: 250px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+
+img{
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h3{
+    color: red;
+}
+
+button{
+    padding: 10px;
+    margin: 0 5px ;
+    width:92px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:nth-child(1){
+    background: rgba(255, 0, 0, 0.699);
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+button:nth-child(2){
+    background: #02b0fb;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
