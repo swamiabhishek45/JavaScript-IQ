@@ -57,5 +57,29 @@
 //     setTimeout(() => {
 //         console.log(i);
 //     }, 0);
-// } // 0 1 2 3 4 5 6 7 8 9 
+// } // 0 1 2 3 4 5 6 7 8 9
+
+// var fullName = "Abhishek Swami";
+// var obj = {
+//     fullName: "Hacked Full Name",
+//     prop: {
+//         fullName: "Inside prop",
+//         getFullName: function () {
+//             return this.fullName;
+//         },
+//     },
+//     getFullName: function () {
+//         return this.fullName;
+//     },
+//     getFullNameV2: () => this.fullName, // in arrow function "this" always refers to global or window obj(in browser)
+//     getFullNameV3: (function () {
+//         return "this.fullName";
+//     })(),
+// };
+// console.log(obj.prop.getFullName()); // inside prop
+// console.log(obj.getFullName()); // Hacked full name
+// console.log(obj.getFullNameV2()); // undefined
+// console.log(obj.getFullNameV3()); // error
+
+
 
