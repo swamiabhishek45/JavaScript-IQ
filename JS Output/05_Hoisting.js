@@ -32,3 +32,17 @@
 // var foo = 100;
 // console.log("FOO", foo);
 
+variable = 10;
+(() => {
+    foo = 100;
+    console.log(variable); // 10
+    var foo = 100;
+    variable = 20;
+    console.log(variable); // 20
+    return 34;
+})();
+
+console.log(foo); // undefined
+console.log(variable); // 20
+var variable = 30;
+
