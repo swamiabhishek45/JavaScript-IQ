@@ -73,7 +73,7 @@
 //     },
 //     getFullNameV2: () => this.fullName, // in arrow function "this" always refers to global or window obj(in browser)
 //     getFullNameV3: (function () {
-//         return "this.fullName";
+//         return this.fullName;
 //     })(),
 // };
 // console.log(obj.prop.getFullName()); // inside prop
@@ -81,5 +81,26 @@
 // console.log(obj.getFullNameV2()); // undefined
 // console.log(obj.getFullNameV3()); // error
 
+const abhishek = {
+    name: "Abhishek Swami",
+    sayName: function () {
+        console.log(this.name);
+    },
+};
 
+const shubham = {
+    name: "Shubham Gade",
+    sayName: function () {
+        console.log(this.name);
+    },
+};
 
+shubham.sayName.call(abhishek);
+
+// var name = "Abhishek Swami";
+// const sayName = () => {
+//     console.log(this.name);
+//     console.log(this);
+// }
+
+// sayName();
