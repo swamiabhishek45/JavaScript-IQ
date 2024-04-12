@@ -45,3 +45,17 @@
 // console.log(variable); // 20
 // var variable = 30;
 
+// var is Global scope
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 0);
+// } // ten times 10
+
+// let and const are local scope
+// for (let i = 0; i < 10; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 0);
+// } // 0 1 2 3 4 5 6 7 8 9 
+
