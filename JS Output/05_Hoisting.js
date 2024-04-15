@@ -81,26 +81,36 @@
 // console.log(obj.getFullNameV2()); // undefined
 // console.log(obj.getFullNameV3()); // error
 
-const abhishek = {
-    name: "Abhishek Swami",
-    sayName: function () {
-        console.log(this.name);
-    },
-};
-
-const shubham = {
-    name: "Shubham Gade",
-    sayName: function () {
-        console.log(this.name);
-    },
-};
-
-shubham.sayName.call(abhishek);
+// const abhishek = {
+//     name: "Abhishek Swami",
+//     sayName: function () {
+//         console.log(this.name);
+//     },
+// };
+// const shubham = {
+//     name: "Shubham Gade",
+//     sayName: function () {
+//         console.log(this.name);
+//     },
+// };
+// shubham.sayName.call(abhishek);
 
 // var name = "Abhishek Swami";
 // const sayName = () => {
 //     console.log(this.name);
 //     console.log(this);
 // }
-
 // sayName();
+
+// const abhishek = {
+//     name: "Abhishek Swami",
+//     sayName: function () {
+//         console.log(this.name);
+//     },
+// };
+// const newFunc = abhishek.sayName.bind(abhishek);
+// setTimeout(newFunc, 2 * 1000);
+// setTimeout(abhishek.sayName.bind(abhishek), 2 * 1000);
+// setTimeout(() => abhishek.sayName(), 2 * 1000);
+
+
