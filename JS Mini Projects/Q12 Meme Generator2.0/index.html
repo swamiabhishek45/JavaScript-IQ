@@ -1,14 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="categories space-y-3">
-        <div id="god" class="drop-zone bg-green-300 p-3 flex flex-row space-x-3 overflow-auto">test</div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meme Generator</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-600">
+        <h1 class="text-3xl text-center mt-10 text-white font-semibold">
+            Meme Generator
+        </h1>
+        <div class="categories space-y-4 mt-5 p-8">
+            <div
+                id="god"
+                class="drop-zone bg-green-300 p-3 flex flex-row space-x-3 overflow-auto"
+            >
+                test
+            </div>
+            <div
+                id="decent"
+                class="drop-zone bg-blue-300 p-3 flex flex-row space-x-3 overflow-auto"
+            >
+                test
+            </div>
+            <div
+                id="average"
+                class="drop-zone bg-yellow-300 p-3 flex flex-row space-x-3 overflow-auto"
+            >
+                test
+            </div>
+            <div
+                id="trash"
+                class="drop-zone bg-red-300 p-3 flex flex-row space-x-3 overflow-auto"
+            >
+                test
+            </div>
+            <div
+                id="intolerable"
+                class="drop-zone bg-gray-300 p-3 flex flex-row space-x-3 overflow-auto"
+            >
+                test
+            </div>
+        </div>
+
+        <div class="images mt-10 grid grid-cols-3 gap-4 m-8">
+            <img
+                width="200px"
+                src="Images/img1.jpg"
+                alt="img1"
+                id="img1"
+                class="draggable"
+                draggable="true"
+            />
+            <img
+                width="200px"
+                src="Images/img2.jpg"
+                alt="img2"
+                id="img2"
+                class="draggable"
+                draggable="true"
+            />
+            <img
+                width="200px"
+                src="Images/img3.jpg"
+                alt="img3"
+                id="img3"
+                class="draggable"
+                draggable="true"
+            />
+            <img
+                width="200px"
+                src="Images/img4.jpg"
+                alt="img4"
+                id="img4"
+                class="draggable"
+                draggable="true"
+            />
+            <img
+                width="200px"
+                src="Images/img5.jpg"
+                alt="img5"
+                id="img5"
+                class="draggable"
+                draggable="true"
+            />
+            <img
+                width="200px"
+                src="Images/img6.jpg"
+                alt="img6"
+                id="img6"
+                class="draggable"
+                draggable="true"
+            />
+        </div>
+    </body>
 </html>
