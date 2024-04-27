@@ -8,15 +8,17 @@
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="./src/output.css" />
         <style>
-            .img-size{
+            .img-size {
                 width: 200px;
             }
         </style>
         <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     </head>
     <body class="bg-gray-600 p-5">
+        <!-- Custom images upload  -->
+
         <div class="upload mb-5">
-            <h2 class="text-white mb-5 font-semibold">Upload custom images</h2>
+            <h2 class="text-white font-semibold text-xl underline my-5">Upload custom images</h2>
             <input
                 type="file"
                 id="imgUpload"
@@ -26,10 +28,29 @@
             />
         </div>
 
-
         <div class="images grid grid-cols-3 gap-4 mb-10" id="imgContainer">
             <!-- uploaded images will be here -->
         </div>
+
+        <!-- custom categories  -->
+
+        <div class="custom-category mb-5">
+            <h2 class="text-white font-semibold text-xl underline">Custom Categories</h2>
+
+            <input type="text" id="categoryName" placeholder="Enter your category" class="text-sm p-2 border rounded-md my-5">
+
+            <input type="color" id="categoryColor" class="rounded-md border">
+
+            <button id="addCategory" class="bg-violet-500 p-2 rounded text-white hover:bg-violet-400">Add Category</button>
+        </div>
+
+
+        <!-- add custom category -->
+
+        <div class="categories space-y-3" id="categories"></div>
+
+
+
 
         <h1 class="text-3xl text-center mt-10 text-white font-semibold">
             Meme Generator
