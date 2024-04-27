@@ -23,16 +23,35 @@ document.querySelector("#addCategory").addEventListener("click", function () {
         "flex-row",
         "space-x-3",
         "overflow-auto",
-        "m-8"
+        "m-8",
+        "p-3"
     );
 
     newCategory.style.backgroundColor = categoryColor;
 
-    newCategory.innerHTML = `<h2 class="text-xl p-3 font-semibold">${categoryName}</h2>`;
+    newCategory.innerHTML = `<h2 class="text-xl font-semibold">${categoryName}</h2>`;
 
     categoryContainer.appendChild(newCategory);
 
     // category drag and drop
+    newCategory.addEventListener("dragover", e => {
+        e.preventDefault();
+        newCategory.classList.add("bg-gray-400");
+    })
+
+    newCategory.addEventListener("dragleave", e => {
+        e.preventDefault();
+        newCategory.classList.remove("bg-gray-400");
+    })
+    
+    newCategory.addEventListener("drop", e => {
+        e.preventDefault();
+        newCategory.classList.remove("bg-gray-400");
+        const id = e.dataTransfer.getData('text');
+        const draggableElem = document.getElementById(id);
+        newCategory.appendChild(draggableElem);
+
+    })
 
 
 });
