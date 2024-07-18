@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(72, 72, 126);
+}
+
+.container{
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #888;
+    background-color: transparent;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input[type="submit"], button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+button{
+    background: transparent;
+}
