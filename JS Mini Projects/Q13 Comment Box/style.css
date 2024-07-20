@@ -34,6 +34,7 @@ body{
     background-color: transparent;
     margin-bottom: 10px;
     outline: none;
+    transition: .5s;
 }
 
 input[type="submit"], button{
@@ -48,4 +49,8 @@ input[type="submit"], button{
 
 button{
     background: transparent;
+}
+
+#btn{
+    display: none;
 }
