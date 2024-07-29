@@ -33,7 +33,7 @@ button{
 
 }
 
-p{
+.input-box{
     width: 100%;
     max-width: 500px;
 background: white;
