@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number Gusser</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1 class="heading">Subscribe to LearnWithAzad</h1>
+        <div class="container">
+            <!-- Start -->
+            <div class="start">
+                <h1>Guess My Number!</h1>
+                <p>(Between 1 and 20)</p>
+                <button id="again" class="btn">Again!</button>
+                <!-- TODO: ❓ -->
+                 <span id="number">?</span>
+            </div>
+            <!-- Input -->
+            <div class="input-box">
+                <input type="number"
+        min="1"
+        max="20"
+        required id="guess" />
+                <button id="check" class="btn">Check</button>
+            </div>
+            <!-- result -->
+            <div class="result">
+                <p>Start guessing...</p>
+                <p>💯Score: <span>20</span></p>
+                <p>🥇Highscore: <span>0</span></p>
+            </div>
+        </div>
+    </body>
+</html>
