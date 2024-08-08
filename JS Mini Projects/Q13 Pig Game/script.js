@@ -16,9 +16,8 @@ const closeModel = function () {
 
 for (let i = 0; i < btnOpenModel.length; i++) {
     btnOpenModel[i].addEventListener("click", openModel);
-    console.log('click');
+    console.log("click");
 }
-
 
 btnCloseModel.addEventListener("click", closeModel);
 overlay.addEventListener("click", closeModel);
